@@ -1,0 +1,336 @@
+{
+  "exercises": [
+    {
+      "name": "intro1",
+      "path": "exercises/00_intro/intro1.cs",
+      "hint": "This exercise already works!\nJust delete the line that says `// I AM NOT DONE` and save the file."
+    },
+    {
+      "name": "intro2",
+      "path": "exercises/00_intro/intro2.cs",
+      "hint": "Two problems:\n1. `console` should be `Console` (capital C).\n2. The first line is missing a semicolon at the end."
+    },
+    {
+      "name": "variables1",
+      "path": "exercises/01_variables/variables1.cs",
+      "hint": "A variable must be declared before use: put a type (or `var`) in front of the name.\n    int x = 5;"
+    },
+    {
+      "name": "variables2",
+      "path": "exercises/01_variables/variables2.cs",
+      "hint": "Give `number` a starting value when you declare it, e.g. `int number = 42;`\nIt has to be bigger than 10 for the check to pass."
+    },
+    {
+      "name": "variables3",
+      "path": "exercises/01_variables/variables3.cs",
+      "hint": "A `const` can never be changed after it's declared.\nRemove `const` to make `score` a normal variable."
+    },
+    {
+      "name": "variables4",
+      "path": "exercises/01_variables/variables4.cs",
+      "hint": "Match each value to its type:\n  19.99m → decimal, true → bool, 'D' → char,\n  \"Hello\" → string, 8_100_000_000 → long, -3.5 → double"
+    },
+    {
+      "name": "variables5",
+      "path": "exercises/01_variables/variables5.cs",
+      "hint": "Use int.Parse(input) to turn text into an int.\nCast with (int)average to drop the decimals.\nUse count.ToString() to turn a number into text."
+    },
+    {
+      "name": "if1",
+      "path": "exercises/02_control_flow/if1.cs",
+      "hint": "Inside BiggerOf:\n    if (a > b)\n    {\n        return a;\n    }\n    return b;"
+    },
+    {
+      "name": "if2",
+      "path": "exercises/02_control_flow/if2.cs",
+      "hint": "Look at the boundaries: is a 12-year-old a child? (the rule says *under* 12)\nIs a 65-year-old a senior? (the rule says 65 *or older*: >=)\nThe student check doesn't need the `|| age < 12` part at all."
+    },
+    {
+      "name": "switch1",
+      "path": "exercises/02_control_flow/switch1.cs",
+      "hint": "Every case section needs a `break;` at the end — add one after `result = \"weekend\";`.\nThen add `case \"Tuesday\":` ... `case \"Friday\":` sharing one body, and a `default:` section."
+    },
+    {
+      "name": "loops1",
+      "path": "exercises/02_control_flow/loops1.cs",
+      "hint": "A for loop header has three parts: for (int i = 1; i <= 100; i++)\nIn the while loop, count each halving with halvings++;"
+    },
+    {
+      "name": "loops2",
+      "path": "exercises/02_control_flow/loops2.cs",
+      "hint": "In the first loop:\n    if (reading < 0) break;\n    if (reading % 2 == 0) continue;\nFor the second part, write a new foreach that does bigCount++ when reading > 5."
+    },
+    {
+      "name": "fizzbuzz",
+      "path": "exercises/02_control_flow/fizzbuzz.cs",
+      "hint": "Check the 'both' case first: a number divisible by 3 AND 5 is divisible by 15 (n % 15 == 0).\nIf you checked n % 3 first, 15 would return \"Fizz\".\nThe fallback is n.ToString()."
+    },
+    {
+      "name": "strings1",
+      "path": "exercises/03_strings/strings1.cs",
+      "hint": "Start an interpolated string with $: $\"Hello, {name}!\"\nFor 2 decimal places: {height:F2}\nYou can do maths inside the braces: {age + 1}\nTo put a \" inside a string, write \\\""
+    },
+    {
+      "name": "strings2",
+      "path": "exercises/03_strings/strings2.cs",
+      "hint": "raw.Trim(), trimmed.ToUpper(), trimmed.Length, trimmed.Contains(\"C#\"), trimmed[0], trimmed.Replace(\"fun\", \"awesome\").\nFor the range: \"C#\" starts at index 9 (count from 0!), and the end of a range is exclusive: trimmed[9..11]."
+    },
+    {
+      "name": "strings3",
+      "path": "exercises/03_strings/strings3.cs",
+      "hint": "In the loop: sb.Append(i); then if (i < 5) sb.Append('-');\nFor the fruits: string.Join(\", \", fruits)"
+    },
+    {
+      "name": "strings4",
+      "path": "exercises/03_strings/strings4.cs",
+      "hint": "orderLine.Split(';') gives you { \"Keyboard\", \"3\", \"49.99\" }.\nParse with int.Parse(parts[1]) and decimal.Parse(parts[2]).\nA $ inside an interpolated string is just a normal character: $\"{quantity} x {product} = ${total}\"\nFor the JSON: $$\"\"\"{\"product\": \"{{product}}\", \"quantity\": {{quantity}}}\"\"\""
+    },
+    {
+      "name": "methods1",
+      "path": "exercises/04_methods/methods1.cs",
+      "hint": "Greet doesn't return anything, so its return type is `void`.\nSquare takes a whole number: `int n`.\nAverage returns a decimal number: `double`."
+    },
+    {
+      "name": "methods2",
+      "path": "exercises/04_methods/methods2.cs",
+      "hint": "IsEven: n % 2 == 0\nDescribe: a string on its own line does nothing — you need `return \"even\";`.\nClamp: add `return value;` at the end for the normal case."
+    },
+    {
+      "name": "methods3",
+      "path": "exercises/04_methods/methods3.cs",
+      "hint": "Default values go right in the parameter list: `int quantity = 1, decimal discount = 0`.\nAn overload is just another method with the same name and different parameters:\n    public static string Describe(string item, int count) => $\"{count} x {item}\";"
+    },
+    {
+      "name": "methods4",
+      "path": "exercises/04_methods/methods4.cs",
+      "hint": "Swap needs `ref` on both parameters AND at the call: Swap(ref x, ref y).\nIn TryDivide, every path must assign `quotient` before returning.\nParseOrZero: if (int.TryParse(text, out int value)) return value; return 0;"
+    },
+    {
+      "name": "methods5",
+      "path": "exercises/04_methods/methods5.cs",
+      "hint": "The return type is a tuple with names: (int Min, int Max, double Average)\nTo deconstruct: var (lo, hi, avg) = Stats(...);"
+    },
+    {
+      "name": "arrays1",
+      "path": "exercises/05_collections/arrays1.cs",
+      "hint": "planets[0], planets[^1], planets.Length, planets[..4]\nThe loop bug: valid indexes go from 0 to Length - 1, so the condition should be i < squares.Length."
+    },
+    {
+      "name": "lists1",
+      "path": "exercises/05_collections/lists1.cs",
+      "hint": "todo.Add(\"write code\"); ... then todo.Insert(0, \"drink coffee\"); then todo.Remove(\"test code\");\nFor evens: foreach over numbers, and evens.Add(n) when n % 2 == 0."
+    },
+    {
+      "name": "dictionaries1",
+      "path": "exercises/05_collections/dictionaries1.cs",
+      "hint": "counts[word] crashes when the word isn't there yet. Try:\n    counts[word] = counts.GetValueOrDefault(word) + 1;\nFor PriceOf:\n    if (menu.TryGetValue(item, out decimal price)) return price;\n    return -1;"
+    },
+    {
+      "name": "collections1",
+      "path": "exercises/05_collections/collections1.cs",
+      "hint": "HasDuplicates: foreach value, if (!seen.Add(v)) return true;\nQueue: line.Dequeue()\nIsBalanced: compare `open` with the opening version of `c` — e.g. if c is ')' then open must be '('.\nAt the end, return stack.Count == 0 (anything left over was never closed)."
+    },
+    {
+      "name": "quiz1",
+      "path": "exercises/quizzes/quiz1.cs",
+      "hint": "Average: guard against Count == 0 first, then sum in a loop and return (double)sum / scores.Count.\nLetter: check the highest grade first: if (average >= 90) return \"A\"; ...\nReport: copy the keys into a list (new List<string>(gradebook.Keys)), Sort() it, build each line with $\"{name}: {avg:F1} ({Letter(avg)})\", and string.Join(\"\\n\", lines)."
+    },
+    {
+      "name": "classes1",
+      "path": "exercises/06_classes/classes1.cs",
+      "hint": "`Value` needs to be `public`.\nConstructor: public Counter(string name) { Name = name; }\nMethods: public void Increment() { Value++; } and similar for Reset.\nDescribe: public string Describe() => $\"{Name}: {Value}\";"
+    },
+    {
+      "name": "classes2",
+      "path": "exercises/06_classes/classes2.cs",
+      "hint": "public string Name { get; }\npublic decimal Price { get; }\nFor Quantity, add `private int _quantity;` and a property whose `set` checks `value < 0` and throws.\npublic decimal Total => Price * Quantity;"
+    },
+    {
+      "name": "classes3",
+      "path": "exercises/06_classes/classes3.cs",
+      "hint": "IssuedCount must be shared by all tickets: make it `static`. Number stays per-ticket.\nIn a static class every member must be static: make CelsiusToFahrenheit `public static`,\nand turn Unit into `public const string Unit = \"°C\";`"
+    },
+    {
+      "name": "classes4",
+      "path": "exercises/06_classes/classes4.cs",
+      "hint": "Use `{ get; init; }` so properties can be set in an object initializer.\nMark Title and Author as `required` to get rid of warning CS8618.\nAdd: public override string ToString() => $\"{Title} by {Author} ({Year})\";",
+      "strict": true
+    },
+    {
+      "name": "structs1",
+      "path": "exercises/07_structs_records/structs1.cs",
+      "hint": "Change `class Point` to `struct Point`.\nlist1 and list2 point at the same List object, so after list2.Add(4) list1 has 4 items too."
+    },
+    {
+      "name": "records1",
+      "path": "exercises/07_structs_records/records1.cs",
+      "hint": "Replace the whole class with a positional record:\n    record Money(decimal Amount, string Currency) { ... }\nInside it: public Money Times(int factor) => this with { Amount = Amount * factor };\nFor c: var c = a with { Currency = \"EUR\" };"
+    },
+    {
+      "name": "enums1",
+      "path": "exercises/08_enums/enums1.cs",
+      "hint": "enum OrderStatus { Pending, Paid, Shipped, Delivered, Cancelled }\nIn Advance: switch (Status) { case OrderStatus.Pending: Status = OrderStatus.Paid; break; ... }\nDelivered and Cancelled don't need cases: nothing happens to them."
+    },
+    {
+      "name": "nullable1",
+      "path": "exercises/09_nullable/nullable1.cs",
+      "hint": "`return null;` instead of -1 (the return type int? allows it).\nint index = missing ?? 0;\nA plain int can't be null: make count an `int?`."
+    },
+    {
+      "name": "nullable2",
+      "path": "exercises/09_nullable/nullable2.cs",
+      "hint": "return customer?.Address?.City ?? \"unknown\";\nReplace both assignments with `settings ??= LoadSettings();`"
+    },
+    {
+      "name": "nullable3",
+      "path": "exercises/09_nullable/nullable3.cs",
+      "hint": "LastLookup has no value until the first lookup: make it `string?`.\nFindName can return null: make its return type `string?`.\nShout: check `if (name is null) return \"NOBODY\";` before calling ToUpper.\nNameLength: FindName(id)?.Length ?? 0",
+      "strict": true
+    },
+    {
+      "name": "inheritance1",
+      "path": "exercises/10_inheritance/inheritance1.cs",
+      "hint": "class Manager : Employee\nThe constructor must pass name and salary to Employee's constructor:\n    public Manager(string name, decimal salary, int teamSize) : base(name, salary)"
+    },
+    {
+      "name": "inheritance2",
+      "path": "exercises/10_inheritance/inheritance2.cs",
+      "hint": "Mark Notification.Send as `virtual`, and EmailNotification.Send as `override`.\nIn SmsNotification:\n    public override string Send() => $\"{base.Send()} (via SMS to {Phone})\";"
+    },
+    {
+      "name": "inheritance3",
+      "path": "exercises/10_inheritance/inheritance3.cs",
+      "hint": "Circle: public override double Area() => Math.PI * Radius * Radius;\nRectangle : Shape, with Width/Height properties and Area() => Width * Height.\nclass Square : Rectangle { public Square(double side) : base(side, side) { } }\nTotalArea: loop over the shapes and add up s.Area()."
+    },
+    {
+      "name": "interfaces1",
+      "path": "exercises/11_interfaces/interfaces1.cs",
+      "hint": "interface IPriced { decimal Price { get; } }\nclass Coffee : IDescribable, IPriced\nAdd a `public decimal Price { get; }` property (set it in the constructor),\nand `public string Describe() => $\"A delicious {Name}\";`"
+    },
+    {
+      "name": "interfaces2",
+      "path": "exercises/11_interfaces/interfaces2.cs",
+      "hint": "class FixedClock(DateTime now) : IClock { public DateTime Now => now; }\nclass SignupService(IEmailSender emailSender, IClock clock)\nThen use emailSender.Send(...) and clock.Now instead of `new SmtpEmailSender()` and DateTime.Now."
+    },
+    {
+      "name": "interfaces3",
+      "path": "exercises/11_interfaces/interfaces3.cs",
+      "hint": "class SemVer : IComparable<SemVer>\npublic int CompareTo(SemVer? other)\n{\n    if (other is null) return 1;\n    if (Major != other.Major) return Major.CompareTo(other.Major);\n    ... same for Minor, then return Patch.CompareTo(other.Patch);\n}"
+    },
+    {
+      "name": "exceptions1",
+      "path": "exercises/12_exceptions/exceptions1.cs",
+      "hint": "Wrap the int.Parse in try { ... } and add catch (FormatException) { return -1; } and catch (OverflowException) { return -1; }.\nFor Divide, add finally { log.Add(\"done\"); } after the catch block."
+    },
+    {
+      "name": "exceptions2",
+      "path": "exercises/12_exceptions/exceptions2.cs",
+      "hint": "Constructor: if (topFloor < 1) throw new ArgumentException(\"...\", nameof(topFloor));\nGoTo: check maintenance first and throw new InvalidOperationException(\"Elevator is under maintenance\");\nthen if (floor < 0 || floor > TopFloor) throw new ArgumentOutOfRangeException(nameof(floor));"
+    },
+    {
+      "name": "exceptions3",
+      "path": "exercises/12_exceptions/exceptions3.cs",
+      "hint": "Add `using` in front of `var connection = ...` so it's disposed automatically.\nclass LimitExceededException : Exception\n{\n    public decimal Amount { get; }\n    public decimal Limit { get; }\n    public LimitExceededException(decimal amount, decimal limit)\n        : base($\"Transfer of {amount} exceeds the limit of {limit}\") { ... }\n}"
+    },
+    {
+      "name": "quiz2",
+      "path": "exercises/quizzes/quiz2.cs",
+      "hint": "Start with the interface and InsufficientFundsException, then Account, then SavingsAccount.\nKeep a private List<string> for history, and expose it as IReadOnlyList<string> History => _history;\nUse `public decimal Balance { get; private set; }`.\nMark Account.Withdraw `virtual`; SavingsAccount overrides it, counts withdrawals, and calls base.Withdraw(amount).\nApplyInterest can simply call Deposit(Balance * InterestRate)."
+    },
+    {
+      "name": "generics1",
+      "path": "exercises/13_generics/generics1.cs",
+      "hint": "void Swap<T>(ref T a, ref T b) { T temp = a; ... }\nList<T> Repeat<T>(T item, int count) { var result = new List<T>(); for (...) result.Add(item); return result; }"
+    },
+    {
+      "name": "generics2",
+      "path": "exercises/13_generics/generics2.cs",
+      "hint": "class RecentItems<T>, and replace every `string` with T.\nAdd: _items.Add(item); if (_items.Count > _capacity) _items.RemoveAt(0);\nMostRecentFirst: var copy = new List<T>(_items); copy.Reverse(); return copy;"
+    },
+    {
+      "name": "generics3",
+      "path": "exercises/13_generics/generics3.cs",
+      "hint": "T Largest<T>(List<T> items) where T : IComparable<T>\nclass Repository<T> where T : class, IEntity\n(`class` lets it return null; `IEntity` gives access to .Id)"
+    },
+    {
+      "name": "patterns1",
+      "path": "exercises/14_pattern_matching/patterns1.cs",
+      "hint": "if (value is int n) return $\"int: {n * 2}\";\nif (value is string s) ...  if (value is List<int> list) ...\nIsValidPercentage: n is >= 0 and <= 100\nIsVowel: c is 'a' or 'e' or 'i' or 'o' or 'u'"
+    },
+    {
+      "name": "patterns2",
+      "path": "exercises/14_pattern_matching/patterns2.cs",
+      "hint": "string Grade(int score) => score switch\n{\n    < 0 or > 100 => \"invalid\",\n    >= 90 => \"A\",\n    ...\n    _ => \"F\",\n};\nShipping: Parcel { WeightKg: <= 2 } => 5m, then Parcel p => 5m + (p.WeightKg - 2) * 2, then _ => throw new ArgumentException(...)"
+    },
+    {
+      "name": "patterns3",
+      "path": "exercises/14_pattern_matching/patterns3.cs",
+      "hint": "Play:\n    var (a, b) when a == b => Result.Draw,\n    (Hand.Rock, Hand.Scissors) or (Hand.Paper, Hand.Rock) or (Hand.Scissors, Hand.Paper) => Result.Win,\n    _ => Result.Lose,\nDiscount: put the most specific arm first, e.g. { Total: > 100, Customer.IsVip: true } => 0.20m,"
+    },
+    {
+      "name": "lambdas1",
+      "path": "exercises/15_lambdas_events/lambdas1.cs",
+      "hint": "square = x => x * x\nadd = (a, b) => a + b\nisLong = s => s.Length > 5\nlog = message => messages.Add(message)\nThe last one is a Func<string, string, string>."
+    },
+    {
+      "name": "lambdas2",
+      "path": "exercises/15_lambdas_events/lambdas2.cs",
+      "hint": "MyWhere: create a new List<T>, loop, and Add the item when keep(item) is true.\nMySelect: Add transform(item) for every item.\nMakeMultiplier: => x => x * factor;\nnextId: () => ++lastId"
+    },
+    {
+      "name": "events1",
+      "path": "exercises/15_lambdas_events/events1.cs",
+      "hint": "Declare: public event Action<string, decimal>? PriceChanged;\nRaise: PriceChanged?.Invoke(symbol, price);\nSubscribe: ticker.PriceChanged += (symbol, price) => changes++;\nand a second handler with a block body that checks price > 100."
+    },
+    {
+      "name": "linq1",
+      "path": "exercises/16_linq/linq1.cs",
+      "hint": "numbers.Where(n => n > 10).ToList()\nnumbers.Select(n => n * 2).ToList()\nnumbers.Where(n => n % 2 == 0).Select(n => $\"#{n}\").ToList()\nwords.Select(w => w.Trim()).Where(w => w.Length > 0).Select(w => w.ToUpper()).ToArray()"
+    },
+    {
+      "name": "linq2",
+      "path": "exercises/16_linq/linq2.cs",
+      "hint": "staff.OrderByDescending(e => e.Salary).Select(e => e.Name).ToList()\n.OrderBy(e => e.Department).ThenBy(e => e.Name)\nFirst(...) vs FirstOrDefault(...)\nAny(e => e.Years < 3), All(...), Count(...), Where(...).Sum(e => e.Salary)\nTop 2: OrderByDescending(...).Take(2).Average(e => e.Salary)"
+    },
+    {
+      "name": "linq3",
+      "path": "exercises/16_linq/linq3.cs",
+      "hint": "1. sales.GroupBy(s => s.Region).ToDictionary(g => g.Key, g => g.Sum(s => s.Quantity * s.UnitPrice))\n2. .Select(s => s.Product).Distinct().Order().ToList()\n3. .GroupBy(s => s.Product).Select(g => (g.Key, g.Sum(s => s.Quantity))).OrderByDescending(t => t.Item2).ToList()\n4. orders.SelectMany(o => o).Sum()"
+    },
+    {
+      "name": "linq4",
+      "path": "exercises/16_linq/linq4.cs",
+      "hint": "from c in customers where c.City != \"London\" orderby c.Name select c.Name\nfrom o in orders join c in customers on o.CustomerId equals c.Id where o.Total > 30 orderby o.Id select $\"{c.Name}: {o.Total}\"\nFor spending, try customers.Select(c => new { c.Name, Total = orders.Where(...).Sum(o => o.Total) }) then sort and format."
+    },
+    {
+      "name": "iterators1",
+      "path": "exercises/17_iterators/iterators1.cs",
+      "hint": "Fibonacci: long a = 0, b = 1; while (true) { yield return a; (a, b) = (b, a + b); }\nFilter: foreach (T item in source) if (keep(item)) yield return item;"
+    },
+    {
+      "name": "extensions1",
+      "path": "exercises/18_extension_methods/extensions1.cs",
+      "hint": "public static bool IsPalindrome(this string text)\n  → remove spaces, ToLower, then compare with its reverse: new string(cleaned.Reverse().ToArray())\npublic static string Truncate(this string text, int maxLength) → text[..maxLength] + \"...\"\npublic static IEnumerable<T> EveryOther<T>(this IEnumerable<T> source) → source.Where((item, index) => index % 2 == 0)"
+    },
+    {
+      "name": "async1",
+      "path": "exercises/19_async/async1.cs",
+      "hint": "Methods that use await must be marked `async`, and return Task<T>:\n    async Task<int> FetchUserCountAsync() { ... }\nThen await the calls: int count = await FetchUserCountAsync();"
+    },
+    {
+      "name": "async2",
+      "path": "exercises/19_async/async2.cs",
+      "hint": "Start all the tasks first, then wait for them together:\n    var tasks = products.Select(p => GetPriceAsync(p)).ToArray();\n    decimal[] results = await Task.WhenAll(tasks);\n    var prices = results.ToList();"
+    },
+    {
+      "name": "async3",
+      "path": "exercises/19_async/async3.cs",
+      "hint": "Pass the token: await Task.Delay(50, ct);\nusing var cts = new CancellationTokenSource(TimeSpan.FromMilliseconds(200)); then pass cts.Token.\nIn CountOrGiveUpAsync wrap the await in try { ... } catch (OperationCanceledException) { return -1; }"
+    },
+    {
+      "name": "quiz3",
+      "path": "exercises/quizzes/quiz3.cs",
+      "hint": "Parse: Split(' '), check there are exactly 5 parts, then use TryParse for each piece and `return null;` whenever one fails.\nFor the duration: parts[4].EndsWith(\"ms\") and int.TryParse(parts[4][..^2], out int duration).\nReport: Where(e => e.Status is >= 500 and <= 599), Average(e => e.DurationMs),\nGroupBy(e => e.Path).OrderByDescending(g => g.Count()).First().Key,\nGroupBy(e => e.Method).ToDictionary(...), and MaxBy(e => e.DurationMs)."
+    }
+  ]
+}
