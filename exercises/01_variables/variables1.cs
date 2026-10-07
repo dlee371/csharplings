@@ -18,9 +18,9 @@
 //
 // Fix the code so that `x` is declared.
 
-// I AM NOT DONE
 
-x = 5;
+
+var x = 5;
 
 Console.WriteLine($"x has the value {x}");
 Check.Equal(5, x);

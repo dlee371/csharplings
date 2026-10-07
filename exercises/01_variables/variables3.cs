@@ -10,9 +10,9 @@
 //
 // The score in this game needs to change. Fix it!
 
-// I AM NOT DONE
 
-const int score = 0;
+
+int score = 0;
 Console.WriteLine($"Starting score: {score}");
 
 score = score + 10;

@@ -6,7 +6,7 @@
 // problem. Read them carefully. (Remember: C# is case-sensitive, so `console`
 // and `Console` are two completely different names.)
 
-// I AM NOT DONE
 
-console.WriteLine("C# is case-sensitive!")
+
+Console.WriteLine("C# is case-sensitive!");
 Console.WriteLine("Compiler errors tell you exactly where to look.");

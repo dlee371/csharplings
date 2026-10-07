@@ -4,9 +4,10 @@
 // Other languages might hand you garbage or a surprise default — C# refuses to
 // compile instead. This saves you from a whole category of bugs!
 
-// I AM NOT DONE
 
-int number;
+
+int number = 11;
+Console.WriteLine("hello?");
 
 if (number > 10)
 {

@@ -12,7 +12,7 @@
 // When an exercise passes, delete the `// I AM NOT DONE` line below and save
 // to move on to the next exercise. Stuck? Press `h` in the runner for a hint.
 
-// I AM NOT DONE
+
 
 // A C# program can start with plain statements at the top of a file
 // ("top-level statements"). They run from top to bottom.

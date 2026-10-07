@@ -59,7 +59,8 @@ public static class Ui
                 Console.WriteLine(Green($"✓ {ex.Name} compiles and all checks pass! 🎉"));
                 Console.WriteLine();
                 Console.WriteLine($"  Take a moment to re-read the code and make sure you understand it.");
-                Console.WriteLine($"  When you're ready, delete the {Yellow("// I AM NOT DONE")} line to move on.");
+                var markerLine = Array.FindIndex(result.Source.Split('\n'), l => Exercise.HasMarker(l)) + 1;
+                Console.WriteLine($"  When you're ready, delete the {Yellow("// I AM NOT DONE")} line ({Bold($"line {markerLine}")}) and save to move on.");
                 break;
             case Outcome.Passed:
                 Console.WriteLine(Green($"✓ {ex.Name} is done!"));
