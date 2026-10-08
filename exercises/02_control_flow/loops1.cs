@@ -20,7 +20,7 @@
 
 // 1. Add up all the numbers from 1 to 100 (inclusive) with a for loop.
 int sum = 0;
-for (???)
+for (int i = 1; i <= 100; i++)
 {
     sum += i;
 }
@@ -33,6 +33,7 @@ while (value > 0)
 {
     value = value / 2;
     // something's missing here...
+    halvings += 1;
 }
 
 Console.WriteLine($"Sum: {sum}, halvings: {halvings}");

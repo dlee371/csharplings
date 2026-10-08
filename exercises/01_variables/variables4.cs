@@ -13,14 +13,14 @@
 // Each variable below has the wrong type for its value. Fix the TYPES only —
 // don't change the values or the checks.
 
-// I AM NOT DONE
 
-int price = 19.99m;
-string isOnSale = true;
-string initial = 'D';
-char greeting = "Hello";
-int worldPopulation = 8_100_000_000;
-int temperature = -3.5;
+
+decimal price = 19.99m;
+bool isOnSale = true;
+char initial = 'D';
+string greeting = "Hello";
+long worldPopulation = 8_100_000_000;
+double temperature = -3.5;
 
 Check.Equal(19.99m, price);
 Check.Equal(true, isOnSale);

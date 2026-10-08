@@ -16,19 +16,19 @@
 // Read the failing check's message, find the bug, fix it, repeat.
 // This is what a lot of real programming looks like!
 
-// I AM NOT DONE
+
 
 string TicketType(int age, bool isStudent)
 {
-    if (age <= 12)
+    if (age < 12)
     {
         return "child";
     }
-    else if (age > 65)
+    else if (age >= 65)
     {
         return "senior";
     }
-    else if (isStudent || age < 12)
+    else if (isStudent && age >= 12 && age <= 64)
     {
         return "student";
     }

@@ -24,10 +24,18 @@
 //
 // Complete BiggerOf so it returns whichever number is larger.
 
-// I AM NOT DONE
+
 
 int BiggerOf(int a, int b)
 {
+    if(a > b)
+    {
+        return a;
+    }
+    else
+    {
+        return b;
+    }
     // Write your if/else here, and `return` the bigger number.
 }
 

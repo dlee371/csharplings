@@ -13,18 +13,18 @@
 //   * Text → number:   int.Parse("42"), double.Parse("3.5"), decimal.Parse("9.99")
 //   * Anything → text: value.ToString()
 
-// I AM NOT DONE
+
 
 string input = "42";
-int parsed = input;          // turn the text into a number
+int parsed = int.Parse(input);          // turn the text into a number
 int sum = parsed + 8;
 
 double average = 7.9;
-int truncated = average;     // use a cast
+int truncated = (int) average;     // use a cast
 int rounded = (int)Math.Round(average);
 
 int count = 3;
-string message = count;      // turn the number into text
+string message = count.ToString();      // turn the number into text
 
 Check.Equal(50, sum);
 Check.Equal(7, truncated);
