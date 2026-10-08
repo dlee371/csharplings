@@ -19,7 +19,7 @@
 //
 // Unlike C or JavaScript, C# does NOT let one case "fall through" into the next.
 
-// I AM NOT DONE
+
 
 string DayType(string day)
 {
@@ -29,8 +29,18 @@ string DayType(string day)
         case "Saturday":
         case "Sunday":
             result = "weekend";
+            break;
         case "Monday":
             result = "ugh";
+            break;
+        case "Tuesday":
+        case "Wednesday":
+        case "Thursday":
+        case "Friday":
+            result = "weekday";
+            break;
+        default:
+            result = "not a day!";
             break;
         // TODO: Tuesday to Friday should give "weekday", anything else "not a day!"
     }

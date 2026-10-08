@@ -9,21 +9,23 @@
 //
 // "Divisible by 3" means n % 3 == 0. Think about which check has to come first!
 
-// I AM NOT DONE
+
 
 string FizzBuzz(int n)
 {
-    if(n % 3 == 0)
+    if (n % 3 == 0 && n % 5 == 0)
+    {
+        return "FizzBuzz";
+    }else if(n % 3 == 0)
     {
         return "Fizz";
-    }
-    else if(n % 5 == 0)
+    }else if(n % 5 == 0)
     {
         return "Buzz";
     }
-    else if (n % 3 == 0 && n % 5 == 0)
+    else
     {
-        return "FizzBuzz";
+        return n.ToString();
     }
 }
 

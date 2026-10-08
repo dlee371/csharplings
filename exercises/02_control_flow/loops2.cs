@@ -15,7 +15,7 @@
 // % is the remainder operator: 7 % 2 == 1 and 8 % 2 == 0.
 // So a number n is even when n % 2 == 0.
 
-// I AM NOT DONE
+
 
 int[] readings = { 4, 7, 10, 3, -1, 8, 5 };
 
@@ -25,12 +25,30 @@ int oddSum = 0;
 foreach (int reading in readings)
 {
     // use `break` and `continue` here
-    oddSum += reading;
+    if(reading % 2 == 1)
+    {
+        oddSum += reading;
+    }
+    else if(reading < 0)
+    {
+        break;
+    }
+    else
+    {
+        continue;
+    }
 }
 
 // 2. Count how many readings are greater than 5 (all of them, including after the -1).
 int bigCount = 0;
 // write a loop here
+foreach(int reading in readings)
+{
+    if(reading > 5)
+    {
+        bigCount++;
+    }
+}
 
 Check.Equal(10, oddSum);    // 7 + 3
 Check.Equal(3, bigCount);   // 7, 10, 8

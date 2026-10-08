@@ -16,7 +16,7 @@
 //
 // Watch out: dividing two ints gives an int — the remainder is thrown away. 7 / 2 == 3
 
-// I AM NOT DONE
+
 
 // 1. Add up all the numbers from 1 to 100 (inclusive) with a for loop.
 int sum = 0;
