@@ -14,16 +14,15 @@
 //
 // Replace each ??? so the checks pass. Use interpolation!
 
-// I AM NOT DONE
 
 string name = "Ada";
 int age = 36;
 double height = 1.6549;
 
-string greeting = ???;
-string description = ???;
-string nextYear = ???;
-string quote = ???;
+string greeting = $"Hello, {name}!";
+string description = $"Ada is {age} years old and {height:F2}m tall.";
+string nextYear = $"Next year {name} will be {age + 1}.";
+string quote = $"{name} said \"hi\"";
 
 Console.WriteLine(greeting);
 Console.WriteLine(description);

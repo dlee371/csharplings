@@ -19,12 +19,20 @@ var sb = new StringBuilder();
 for (int i = 1; i <= 5; i++)
 {
     // Append i, then a "-" — but only if this isn't the last number!
-    ???
+    if(i < 5)
+    {
+        sb.Append($"{i} - ");
+    }
+    else
+    {
+        sb.AppendLine(i.ToString());
+    }
 }
 string countdown = sb.ToString();
 
 string[] fruits = { "apple", "banana", "cherry" };
-string fruitList = ???;
+string fruitList = "";
+fruitList.Join(", ", fruits).ToString();
 
 Check.Equal("1-2-3-4-5", countdown);
 Check.Equal("apple, banana, cherry", fruitList);

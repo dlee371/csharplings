@@ -14,17 +14,17 @@
 //
 // Strings are *immutable*: these methods return a NEW string. The original never changes.
 
-// I AM NOT DONE
+
 
 string raw = "   Learning C# is fun!   ";
 
-string trimmed = raw;            // 1. remove the extra spaces
-string shouting = trimmed;       // 2. make `trimmed` all uppercase
-int length = 0;                  // 3. how many characters are in `trimmed`?
-bool mentionsCSharp = false;     // 4. does `trimmed` contain "C#"?
-char firstLetter = ' ';          // 5. the first character of `trimmed`
-string language = "";            // 6. get "C#" out of `trimmed` using a range [start..end]
-string happier = trimmed;        // 7. replace "fun" with "awesome"
+string trimmed = raw.Trim();            // 1. remove the extra spaces
+string shouting = trimmed.ToUpper();       // 2. make `trimmed` all uppercase
+int length = trimmed.Length;                  // 3. how many characters are in `trimmed`?
+bool mentionsCSharp = trimmed.Contains("C#");     // 4. does `trimmed` contain "C#"?
+char firstLetter = trimmed[0];          // 5. the first character of `trimmed`
+string language = trimmed[9..11];            // 6. get "C#" out of `trimmed` using a range [start..end]
+string happier = trimmed.Replace("fun", "awesome");        // 7. replace "fun" with "awesome"
 
 Check.Equal("Learning C# is fun!", trimmed);
 Check.Equal("LEARNING C# IS FUN!", shouting);
